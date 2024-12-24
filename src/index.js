@@ -1,11 +1,20 @@
+import axios from "axios";
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import App from './App';
+import './index.css';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+axios.defaults.baseURL = process.env.REACT_APP_BASE_URL;
+axios.defaults.headers.common["Authorization"] =
+  `jwt ${localStorage.getItem("access_token")}` || "";
+axios.defaults.headers.common["accept"] = "application/json";
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  <>
     <App />
-  </React.StrictMode>
+    <ToastContainer position="top-center" />
+  </>
 );

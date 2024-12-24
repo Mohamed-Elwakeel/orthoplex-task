@@ -28,8 +28,9 @@ const useFetch = (url, dependencies = [], disabled = false) => {
         };
 
         fetchData();
-    }, [url, ...dependencies, disabled]);
-    /* eslint-enable react-hooks/exhaustive-deps */
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [url, disabled, ...dependencies]);
+
     return { data, loading, error };
 };
 

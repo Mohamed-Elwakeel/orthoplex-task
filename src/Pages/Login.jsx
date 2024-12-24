@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -7,7 +7,7 @@ import { useAuth } from '../context/AuthContext';
 
 export default function Login() {
     const navigate = useNavigate();
-    const { loginUser } = useAuth();
+    const { isAuthenticated, loginUser } = useAuth();
 
     const {
         register,
@@ -15,16 +15,21 @@ export default function Login() {
         formState: { errors, isSubmitting },
     } = useForm();
 
+    useEffect(() => {
+        if (isAuthenticated) {
+            navigate('/');
+        }
+    }, [isAuthenticated, navigate]);
+
     const onSubmit = async (data) => {
         try {
             const response = await loginUser(data.email, data.password);
             if (response.success) {
-                navigate('/');
             }
         } catch (error) {
-            toast.error(error.message || "Something went wrong");
+            toast.error(error.message || 'Something went wrong');
         }
-    };
+    }
 
     return (
         <div className="custom-container flex flex-col items-center justify-center min-h-screen bg-gray-100">

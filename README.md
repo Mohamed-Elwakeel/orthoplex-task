@@ -1,70 +1,78 @@
-# Getting Started with Create React App
+# Orthoplex Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- This is a simple and intuitive React.js frontend application designed to showcase Dashboard and Login-page. It includes a clean user interface for managing tasks, responsive design for multiple screen sizes, and authentication to access specific features. The application is built to provide a seamless user experience.
 
-## Available Scripts
+![Home Page](src/Assets/Orthoplex-Task.png)
 
-In the project directory, you can run:
+## Demo
 
-### `npm start`
+<a href="https://orthoplex-task.netlify.app/" target="_blank">Live Demo</a>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Features
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **User Management:**
 
-### `npm test`
+  - Fetch and display user data dynamically.
+  - View user details in a responsive table.
+  - Display user avatars with a modal dialog feature.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Authentication:**
 
-### `npm run build`
+  - Login page with authentication flow.
+  - Use predefined credentials to access the application.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Responsive Design:**
+  - Optimized for various screen sizes (mobile, tablet, and desktop).
+  - Provides a seamless user experience across all devices.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Dynamic Credentials Reveal:**
+  - A flipping card to reveal login credentials for testing purposes.
+  - Copy functionality for email and password.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Ensure you have the following software installed on your machine:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [Node.js]
+- [npm package]
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### Installation
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Clone the repository:
 
-## Learn More
+```
+git clone https://github.com/Mohamed-Elwakeel/orthoplex-task.git
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. Navigate to the project directory:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```
+cd orthoplex-task
+```
 
-### Code Splitting
+3. Install dependencies:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+```
+npm install
+```
 
-### Analyzing the Bundle Size
+4. Start the development server:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```
+npm start
+Open your browser and visit http://localhost:3000.
+```
 
-### Making a Progressive Web App
+Navigate to the Sign In, Sign Up, and Home pages to start managing your todos!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+# Technologies Used
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- React.js: A JavaScript library for building user interfaces.
+- React Router: Declarative routing for React.js applications.
+- Context API: For managing global state.
+- Axios: For fetching data from APIs.
+- Tailwind CSS: Utility-first styling for responsive design.
+- React Hook Form: Form management and validation.
+- React Toastify: For displaying notifications.

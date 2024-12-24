@@ -1,12 +1,13 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
-import { loginUser } from '../Services/loginService';
 import { toast } from 'react-toastify';
 import CredentialsCard from '../Components/CredentialsCard';
+import { useAuth } from '../context/AuthContext';
 
 export default function Login() {
     const navigate = useNavigate();
+    const { loginUser } = useAuth();
 
     const {
         register,
@@ -18,8 +19,7 @@ export default function Login() {
         try {
             const response = await loginUser(data.email, data.password);
             if (response.success) {
-                toast.success(response.message || "Login Successful");
-                navigate("/");
+                navigate('/');
             }
         } catch (error) {
             toast.error(error.message || "Something went wrong");

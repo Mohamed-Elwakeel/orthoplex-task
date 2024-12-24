@@ -1,19 +1,16 @@
 import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
-import { logout } from "../Helpers/logout";
+import { useNavigate } from "react-router-dom";
 import navLogo from "../Assets/navLogo.webp";
+import { useAuth } from "../context/AuthContext";
 
 export default function Navbar() {
     const navigate = useNavigate();
-    const location = useLocation();
+    const { logoutUser, isAuthenticated } = useAuth();
 
-    // Check if the user is authenticated
-    const isAuthenticated = localStorage.getItem("isAuthenticated");
-
-    // Hide the navbar on the login page
-    if (location.pathname === "/login") {
-        return null;
-    }
+    const handleLogout = () => {
+        // Use the context-based logout
+        logoutUser(navigate);
+    };
 
     return (
         <nav className="bg-gray-900 text-white p-4 shadow-md flex justify-between items-center">
@@ -44,7 +41,7 @@ export default function Navbar() {
                 {isAuthenticated && (
                     <button
                         className="bg-white text-gray-900 px-4 py-2 rounded hover:bg-gray-200 transition"
-                        onClick={() => logout(navigate)}
+                        onClick={handleLogout}
                     >
                         Logout
                     </button>

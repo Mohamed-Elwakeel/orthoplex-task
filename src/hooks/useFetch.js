@@ -28,7 +28,7 @@ const useFetch = (url, dependencies = [], disabled = false) => {
         };
 
         fetchData();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line
     }, [url, disabled, ...dependencies]);
 
     return { data, loading, error };

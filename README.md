@@ -1,6 +1,6 @@
 # Orthoplex Dashboard
 
-- This is a simple and intuitive React.js frontend application designed to showcase Dashboard and Login-page. It includes a clean user interface for managing tasks, responsive design for multiple screen sizes, and authentication to access specific features. The application is built to provide a seamless user experience.
+- This React.js application features a login page and a responsive dashboard, showcasing data fetched from an API. With a clean UI, authentication, and seamless navigation via a responsive navbar, the app delivers a user-friendly experience across devices. It leverages modern React tools like Context and Axios to meet essential development challenges.
 
 ![Home Page](src/Assets/Orthoplex-Task.png)
 

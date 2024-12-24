@@ -29,7 +29,7 @@ const useFetch = (url, dependencies = [], disabled = false) => {
 
         fetchData();
     }, [url, ...dependencies, disabled]);
-
+    /* eslint-enable react-hooks/exhaustive-deps */
     return { data, loading, error };
 };
 

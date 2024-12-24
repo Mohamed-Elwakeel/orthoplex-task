@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { useNavigate } from 'react-router-dom';
 import { loginUser } from '../Services/loginService';
 import { toast } from 'react-toastify';
+import CredentialsCard from '../Components/CredentialsCard';
 
 export default function Login() {
     const navigate = useNavigate();
@@ -24,8 +25,9 @@ export default function Login() {
             toast.error(error.message || "Something went wrong");
         }
     };
+
     return (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
+        <div className="custom-container flex flex-col items-center justify-center min-h-screen bg-gray-100">
             {/* Card Container */}
             <div className="bg-white p-12 rounded-3xl shadow-md w-full max-w-lg">
                 <h1 className="text-2xl font-bold mb-2">Welcome back!</h1>
@@ -92,6 +94,7 @@ export default function Login() {
                     </div>
                 </form>
             </div>
+            <CredentialsCard />
         </div>
     );
 }
